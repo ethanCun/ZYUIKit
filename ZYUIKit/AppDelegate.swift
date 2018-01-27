@@ -8,21 +8,40 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    //截屏视图
+    var screenShotView:UIImageView?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let ListVc:ListViewController = ListViewController()
-        let ListNav:UINavigationController = UINavigationController(rootViewController: ListVc)
+        
+        let ListNav:ZYNavgationController = ZYNavgationController(rootViewController: ListVc);
+        
+        
         self.window?.rootViewController = ListNav
-        self.window?.backgroundColor = UIColor.white
+        self.window?.backgroundColor = UIColor.black
         self.window?.makeKeyAndVisible()
+        
+        self.customPopGesture()
+        
         return true
+    }
+    
+    func customPopGesture() -> Void {
+        
+        
+        screenShotView = UIImageView(frame: (self.window?.bounds)!)
+        //其实影藏
+        screenShotView?.isHidden = true
+        //添加到最下面
+        self.window?.insertSubview(screenShotView!, at: 0)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

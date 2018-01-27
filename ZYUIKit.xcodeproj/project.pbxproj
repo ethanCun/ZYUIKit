@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0617C5F2201C0F37007AAF99 /* ZYNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5F1201C0F37007AAF99 /* ZYNavgationController.swift */; };
+		0617C5F4201C4D4E007AAF99 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5F3201C4D4E007AAF99 /* ViewController1.swift */; };
+		0617C5F6201C4D55007AAF99 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5F5201C4D55007AAF99 /* ViewController2.swift */; };
+		0617C5FE201C536E007AAF99 /* ZYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5FD201C536E007AAF99 /* ZYViewController.swift */; };
+		0617C600201C64A3007AAF99 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5FF201C64A3007AAF99 /* ViewController3.swift */; };
 		065C8FAA201835ED0097CBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FA9201835ED0097CBFF /* AppDelegate.swift */; };
 		065C8FAC201835ED0097CBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FAB201835ED0097CBFF /* ViewController.swift */; };
 		065C8FAF201835ED0097CBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065C8FAD201835ED0097CBFF /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0617C5F1201C0F37007AAF99 /* ZYNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYNavgationController.swift; sourceTree = "<group>"; };
+		0617C5F3201C4D4E007AAF99 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		0617C5F5201C4D55007AAF99 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		0617C5FD201C536E007AAF99 /* ZYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYViewController.swift; sourceTree = "<group>"; };
+		0617C5FF201C64A3007AAF99 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		065C8FA6201835ED0097CBFF /* ZYUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C8FA9201835ED0097CBFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065C8FAB201835ED0097CBFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0617C5EA201B6ACB007AAF99 /* CustomPopBack */ = {
+			isa = PBXGroup;
+			children = (
+				0617C5F1201C0F37007AAF99 /* ZYNavgationController.swift */,
+				0617C5FD201C536E007AAF99 /* ZYViewController.swift */,
+				0617C5F3201C4D4E007AAF99 /* ViewController1.swift */,
+				0617C5F5201C4D55007AAF99 /* ViewController2.swift */,
+				0617C5FF201C64A3007AAF99 /* ViewController3.swift */,
+			);
+			path = CustomPopBack;
+			sourceTree = "<group>";
+		};
 		065C8F9D201835ED0097CBFF = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +86,11 @@
 		065C8FA8201835ED0097CBFF /* ZYUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				065C8FA9201835ED0097CBFF /* AppDelegate.swift */,
 				065C8FC920183DFC0097CBFF /* List */,
+				0617C5EA201B6ACB007AAF99 /* CustomPopBack */,
 				065C8FC420183DFC0097CBFF /* ScratchCard */,
 				065C8FC620183DFC0097CBFF /* ZYProgressView */,
-				065C8FA9201835ED0097CBFF /* AppDelegate.swift */,
 				065C8FAB201835ED0097CBFF /* ViewController.swift */,
 				065C8FAD201835ED0097CBFF /* Main.storyboard */,
 				065C8FB0201835ED0097CBFF /* Assets.xcassets */,
@@ -177,11 +200,16 @@
 			files = (
 				065C8FD220183EEE0097CBFF /* ScratchcardView.swift in Sources */,
 				065C8FD020183E200097CBFF /* ZYProgressView.swift in Sources */,
+				0617C600201C64A3007AAF99 /* ViewController3.swift in Sources */,
 				065C8FCC20183DFC0097CBFF /* ProgressTextViewController.swift in Sources */,
+				0617C5FE201C536E007AAF99 /* ZYViewController.swift in Sources */,
 				065C8FAC201835ED0097CBFF /* ViewController.swift in Sources */,
+				0617C5F6201C4D55007AAF99 /* ViewController2.swift in Sources */,
 				065C8FAA201835ED0097CBFF /* AppDelegate.swift in Sources */,
 				065C8FCB20183DFC0097CBFF /* ScratchcardViewController.swift in Sources */,
+				0617C5F4201C4D4E007AAF99 /* ViewController1.swift in Sources */,
 				065C8FCE20183DFC0097CBFF /* ListViewController.swift in Sources */,
+				0617C5F2201C0F37007AAF99 /* ZYNavgationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +349,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TGQ3T5S6T9;
 				INFOPLIST_FILE = ZYUIKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.ZYUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,11 +365,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TGQ3T5S6T9;
 				INFOPLIST_FILE = ZYUIKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.ZYUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

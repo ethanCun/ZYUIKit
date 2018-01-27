@@ -10,10 +10,17 @@ import UIKit
 
 class ScratchcardViewController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        (self.navigationController as! ZYNavgationController).panGesDisEnabled = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //给控制器添加一个背景色
+        self.view.backgroundColor = UIColor.white
         
         let scratchCard:ScratchcardView = ScratchcardView.init(frame: CGRect.init(x: 100, y: 100, width: 200, height: 200))
         scratchCard.coverImageView?.image = #imageLiteral(resourceName: "刮刮乐")
@@ -26,21 +33,5 @@ class ScratchcardViewController: UIViewController {
         }
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
