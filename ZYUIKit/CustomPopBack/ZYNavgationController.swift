@@ -37,12 +37,10 @@ class ZYNavgationController: UINavigationController, UIGestureRecognizerDelegate
 
             if !panGesDisEnabled! {
 
-                self.interactivePopGestureRecognizer?.isEnabled = false
                 self.customPopGes?.isEnabled = true
 
             }else{
 
-                self.interactivePopGestureRecognizer?.isEnabled = true
                 self.customPopGes?.isEnabled = false
             }
         }

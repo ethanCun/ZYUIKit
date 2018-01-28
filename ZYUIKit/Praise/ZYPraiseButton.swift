@@ -10,8 +10,8 @@ import UIKit
 
 class ZYPraiseButton: UIButton {
 
-    var emitterLayer:CAEmitterLayer?
-    var emitterCell:CAEmitterCell?
+    let emitterLayer:CAEmitterLayer = CAEmitterLayer.init()
+    let emitterCell:CAEmitterCell = CAEmitterCell.init()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,42 +26,42 @@ class ZYPraiseButton: UIButton {
     // MARK: - 配置粒子
     func configPraiseBtn() -> Void {
         
-        self.emitterCell = CAEmitterCell.init()
-        self.emitterCell?.name = "emitter"
-        self.emitterCell?.alphaSpeed = -1.0
-        self.emitterCell?.alphaSpeed = 0.1
-        self.emitterCell?.lifetime = 1.0
-        self.emitterCell?.lifetimeRange = 0.1
-        self.emitterCell?.velocity = 40
-        self.emitterCell?.velocityRange = 10
-        self.emitterCell?.scale = 0.5
-        self.emitterCell?.scaleRange = 0.1
-        self.emitterCell?.contents = #imageLiteral(resourceName: "spark_red").cgImage
+        self.layer.addSublayer(emitterLayer)
         
-        self.emitterLayer = CAEmitterLayer.init()
-        self.layer.addSublayer(self.emitterLayer!)
-        self.emitterLayer?.emitterSize = CGSize.init(width: self.bounds.size.width+40, height: self.bounds.size.height+40)
-        self.emitterLayer?.renderMode = kCAEmitterLayerOldestFirst
-        self.emitterLayer?.emitterMode = kCAEmitterLayerOutline
-        self.emitterLayer?.emitterShape = kCAEmitterLayerCircle
+        //rederMode：控制着在视觉上粒子图片是如何混合的。我们在实例中设置为了KCAEmitterLayerAdditive，它表示这：合并粒子重叠部分的亮度使其更加明亮，其他效果可以尝试下。
+        //        snowLayer.renderMode = kCAEmitterLayerAdditive
+        //emitterPosition：表示粒子发射器的中心位置
+        emitterLayer.emitterPosition = CGPoint.init(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
+        //设置发射源形状
+        emitterLayer.emitterShape = kCAEmitterLayerCircle
+        //设置发射源发射位置
+        emitterLayer.emitterMode = kCAEmitterLayerOutline
+        //设置粒子渲染
+        emitterLayer.renderMode = kCAEmitterLayerOldestFirst
+        //设置发射源形状的大小
+        emitterLayer.emitterSize = CGSize.init(width: 40, height: 40)
         
-        self.emitterLayer?.position = CGPoint.init(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
-        self.emitterLayer?.emitterCells = [self.emitterCell!]
+        emitterCell.name = "emitterCell"
+        emitterCell.contents = #imageLiteral(resourceName: "spark_red").cgImage
+        //设置产生速率
+        emitterCell.birthRate = 500.0
+        //设置消失时间
+        emitterCell.lifetime = 1.0
+        emitterCell.alphaSpeed = 0.1
+        //设置发射速度
+        emitterCell.velocity = 40
+        emitterCell.velocityRange = 10
+        //设置粒子大小比例
+        emitterCell.scale = 1.0;
+        emitterCell.scaleRange = 0.5;
+        //设置发散范围
+        emitterCell.emissionLongitude = 0
+        emitterCell.emissionRange = CGFloat.pi*2
+        emitterLayer.emitterCells = [emitterCell]
         
-        self.emitterLayer?.setValue(NSNumber.init(value: 2000), forKey: "emitterCells.explosionCell.birthRate")
-        
-        self.emitterLayer?.beginTime = CACurrentMediaTime()
+        emitterLayer.beginTime = CFTimeInterval(MAXFLOAT)
     }
     
-    // MARK: - 设置发射源
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        self.emitterLayer?.backgroundColor = UIColor.red.cgColor
-        
-        // 发射源位置
-        self.emitterLayer?.position = CGPoint.init(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
-    }
     
     //MARK:-isSelected
     override var isSelected: Bool{
@@ -98,15 +98,27 @@ class ZYPraiseButton: UIButton {
         scaleAnimation.repeatCount = 1
         self.layer.add(scaleAnimation, forKey: "scaleAnimation")
         
-        self.emitterLayer?.setValue(NSNumber.init(value: 2000), forKey: "emitterCells.emitterCell.birthRate")
+        //重新设置产生粒子的数量
+        self.emitterLayer.setValue(NSNumber.init(value: 200), forKeyPath: "emitterCells.emitterCell.birthRate")
         
         //开始粒子动画
-        self.emitterLayer?.beginTime = CACurrentMediaTime()
+        self.emitterLayer.beginTime = CACurrentMediaTime()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.5) {
+            
+            self.stopAnimation()
+        }
     }
     
     // MARK: - 结束动画
     func stopAnimation() -> Void {
         
+        self.emitterLayer.setValue(NSNumber.init(value: 0), forKey: "emitterCells.emitterCell.birthRate")
+        self.emitterLayer.beginTime = CFTimeInterval(MAXFLOAT)
         self.layer.removeAllAnimations()
+    }
+    
+    deinit {
+        self.emitterLayer.removeFromSuperlayer()
     }
 }

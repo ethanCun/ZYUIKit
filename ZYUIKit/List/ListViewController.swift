@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tableView:UITableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), style: .plain)
-    var datas:[String?] = ["类似歌词进度文字", "类似刮刮乐", "类似天天快报返回手势","点赞效果"]
+    var datas:[String?] = ["类似歌词进度文字", "类似刮刮乐", "类似天天快报返回手势","CAEmitterLayer效果"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
