@@ -12,6 +12,8 @@
 		0617C5F6201C4D55007AAF99 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5F5201C4D55007AAF99 /* ViewController2.swift */; };
 		0617C5FE201C536E007AAF99 /* ZYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5FD201C536E007AAF99 /* ZYViewController.swift */; };
 		0617C600201C64A3007AAF99 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C5FF201C64A3007AAF99 /* ViewController3.swift */; };
+		0617C603201C8BE1007AAF99 /* ZYPraiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C602201C8BE1007AAF99 /* ZYPraiseViewController.swift */; };
+		0617C605201C8FD0007AAF99 /* ZYPraiseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617C604201C8FD0007AAF99 /* ZYPraiseButton.swift */; };
 		065C8FAA201835ED0097CBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FA9201835ED0097CBFF /* AppDelegate.swift */; };
 		065C8FAC201835ED0097CBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FAB201835ED0097CBFF /* ViewController.swift */; };
 		065C8FAF201835ED0097CBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065C8FAD201835ED0097CBFF /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		0617C5F5201C4D55007AAF99 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		0617C5FD201C536E007AAF99 /* ZYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYViewController.swift; sourceTree = "<group>"; };
 		0617C5FF201C64A3007AAF99 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		0617C602201C8BE1007AAF99 /* ZYPraiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYPraiseViewController.swift; sourceTree = "<group>"; };
+		0617C604201C8FD0007AAF99 /* ZYPraiseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYPraiseButton.swift; sourceTree = "<group>"; };
 		065C8FA6201835ED0097CBFF /* ZYUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C8FA9201835ED0097CBFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065C8FAB201835ED0097CBFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 			path = CustomPopBack;
 			sourceTree = "<group>";
 		};
+		0617C601201C8BCD007AAF99 /* Praise */ = {
+			isa = PBXGroup;
+			children = (
+				0617C602201C8BE1007AAF99 /* ZYPraiseViewController.swift */,
+				0617C604201C8FD0007AAF99 /* ZYPraiseButton.swift */,
+			);
+			path = Praise;
+			sourceTree = "<group>";
+		};
 		065C8F9D201835ED0097CBFF = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				065C8FA9201835ED0097CBFF /* AppDelegate.swift */,
+				0617C601201C8BCD007AAF99 /* Praise */,
 				065C8FC920183DFC0097CBFF /* List */,
 				0617C5EA201B6ACB007AAF99 /* CustomPopBack */,
 				065C8FC420183DFC0097CBFF /* ScratchCard */,
@@ -206,7 +220,9 @@
 				065C8FAC201835ED0097CBFF /* ViewController.swift in Sources */,
 				0617C5F6201C4D55007AAF99 /* ViewController2.swift in Sources */,
 				065C8FAA201835ED0097CBFF /* AppDelegate.swift in Sources */,
+				0617C605201C8FD0007AAF99 /* ZYPraiseButton.swift in Sources */,
 				065C8FCB20183DFC0097CBFF /* ScratchcardViewController.swift in Sources */,
+				0617C603201C8BE1007AAF99 /* ZYPraiseViewController.swift in Sources */,
 				0617C5F4201C4D4E007AAF99 /* ViewController1.swift in Sources */,
 				065C8FCE20183DFC0097CBFF /* ListViewController.swift in Sources */,
 				0617C5F2201C0F37007AAF99 /* ZYNavgationController.swift in Sources */,

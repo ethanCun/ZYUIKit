@@ -41,6 +41,8 @@ class ViewController1: ZYViewController {
         btn3.addTarget(self, action: #selector(self.solveConflictGes), for: .touchUpInside)
         self.view.addSubview(btn3)
         
+
+        
         let nav:ZYNavgationController = self.navigationController as! ZYNavgationController
         
         nav.popBegin = {(_ vc:UIViewController) ->Void in

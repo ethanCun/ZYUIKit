@@ -287,14 +287,14 @@ class ZYNavgationController: UINavigationController, UIGestureRecognizerDelegate
     override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         
         //所有控制器
-        let vcs:[UIViewController]? = self.navigationController?.popToViewController(viewController, animated: animated)
+        let vcs:[UIViewController]? = super.popToViewController(viewController, animated: animated)
         
         guard self.screenShotArr.count > (vcs?.count)! else {
             return super.popToViewController(viewController, animated: animated)
         }
         
         //遍历移除最后一张截图
-        for _ in 0...(vcs?.count)!{
+        for _ in 0...(vcs?.count)!-1{
             
             self.screenShotArr.removeLast()
         }
