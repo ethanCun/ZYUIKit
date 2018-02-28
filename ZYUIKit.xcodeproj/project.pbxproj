@@ -24,6 +24,7 @@
 		065C8FCE20183DFC0097CBFF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FCA20183DFC0097CBFF /* ListViewController.swift */; };
 		065C8FD020183E200097CBFF /* ZYProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FCF20183E200097CBFF /* ZYProgressView.swift */; };
 		065C8FD220183EEE0097CBFF /* ScratchcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FD120183EEE0097CBFF /* ScratchcardView.swift */; };
+		06776C91204628FF0009D35D /* ZYHoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06776C90204628FF0009D35D /* ZYHoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		065C8FCA20183DFC0097CBFF /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		065C8FCF20183E200097CBFF /* ZYProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYProgressView.swift; sourceTree = "<group>"; };
 		065C8FD120183EEE0097CBFF /* ScratchcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchcardView.swift; sourceTree = "<group>"; };
+		06776C90204628FF0009D35D /* ZYHoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYHoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		065C8FA8201835ED0097CBFF /* ZYUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				06776C8F204628E00009D35D /* HoverTableView */,
 				065C8FA9201835ED0097CBFF /* AppDelegate.swift */,
 				0617C601201C8BCD007AAF99 /* Praise */,
 				065C8FC920183DFC0097CBFF /* List */,
@@ -138,6 +141,14 @@
 				065C8FCA20183DFC0097CBFF /* ListViewController.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		06776C8F204628E00009D35D /* HoverTableView */ = {
+			isa = PBXGroup;
+			children = (
+				06776C90204628FF0009D35D /* ZYHoverViewController.swift */,
+			);
+			path = HoverTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 				065C8FD020183E200097CBFF /* ZYProgressView.swift in Sources */,
 				0617C600201C64A3007AAF99 /* ViewController3.swift in Sources */,
 				065C8FCC20183DFC0097CBFF /* ProgressTextViewController.swift in Sources */,
+				06776C91204628FF0009D35D /* ZYHoverViewController.swift in Sources */,
 				0617C5FE201C536E007AAF99 /* ZYViewController.swift in Sources */,
 				065C8FAC201835ED0097CBFF /* ViewController.swift in Sources */,
 				0617C5F6201C4D55007AAF99 /* ViewController2.swift in Sources */,
