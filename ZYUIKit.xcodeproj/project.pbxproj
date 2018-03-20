@@ -25,6 +25,8 @@
 		065C8FD020183E200097CBFF /* ZYProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FCF20183E200097CBFF /* ZYProgressView.swift */; };
 		065C8FD220183EEE0097CBFF /* ScratchcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065C8FD120183EEE0097CBFF /* ScratchcardView.swift */; };
 		06776C91204628FF0009D35D /* ZYHoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06776C90204628FF0009D35D /* ZYHoverViewController.swift */; };
+		41AFB063206162E10094AF02 /* ZYSecurityBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AFB062206162E10094AF02 /* ZYSecurityBoxViewController.swift */; };
+		41AFB065206163170094AF02 /* ZYSecurityBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AFB064206163170094AF02 /* ZYSecurityBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		065C8FCF20183E200097CBFF /* ZYProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYProgressView.swift; sourceTree = "<group>"; };
 		065C8FD120183EEE0097CBFF /* ScratchcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchcardView.swift; sourceTree = "<group>"; };
 		06776C90204628FF0009D35D /* ZYHoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYHoverViewController.swift; sourceTree = "<group>"; };
+		41AFB062206162E10094AF02 /* ZYSecurityBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYSecurityBoxViewController.swift; sourceTree = "<group>"; };
+		41AFB064206163170094AF02 /* ZYSecurityBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYSecurityBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		065C8FA8201835ED0097CBFF /* ZYUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				41AFB05F2061626C0094AF02 /* SecurityBox */,
 				06776C8F204628E00009D35D /* HoverTableView */,
 				065C8FA9201835ED0097CBFF /* AppDelegate.swift */,
 				0617C601201C8BCD007AAF99 /* Praise */,
@@ -149,6 +154,15 @@
 				06776C90204628FF0009D35D /* ZYHoverViewController.swift */,
 			);
 			path = HoverTableView;
+			sourceTree = "<group>";
+		};
+		41AFB05F2061626C0094AF02 /* SecurityBox */ = {
+			isa = PBXGroup;
+			children = (
+				41AFB062206162E10094AF02 /* ZYSecurityBoxViewController.swift */,
+				41AFB064206163170094AF02 /* ZYSecurityBoxView.swift */,
+			);
+			path = SecurityBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +247,11 @@
 				0617C5F6201C4D55007AAF99 /* ViewController2.swift in Sources */,
 				065C8FAA201835ED0097CBFF /* AppDelegate.swift in Sources */,
 				0617C605201C8FD0007AAF99 /* ZYPraiseButton.swift in Sources */,
+				41AFB065206163170094AF02 /* ZYSecurityBoxView.swift in Sources */,
 				065C8FCB20183DFC0097CBFF /* ScratchcardViewController.swift in Sources */,
 				0617C603201C8BE1007AAF99 /* ZYPraiseViewController.swift in Sources */,
 				0617C5F4201C4D4E007AAF99 /* ViewController1.swift in Sources */,
+				41AFB063206162E10094AF02 /* ZYSecurityBoxViewController.swift in Sources */,
 				065C8FCE20183DFC0097CBFF /* ListViewController.swift in Sources */,
 				0617C5F2201C0F37007AAF99 /* ZYNavgationController.swift in Sources */,
 			);

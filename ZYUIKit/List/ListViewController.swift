@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tableView:UITableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), style: .plain)
-    var datas:[String?] = ["类似歌词进度文字", "类似刮刮乐", "类似天天快报返回手势","CAEmitterLayer效果","tableView拉动弹簧效果"]
+    var datas:[String?] = ["类似歌词进度文字", "类似刮刮乐", "类似天天快报返回手势","CAEmitterLayer效果","tableView拉动弹簧效果","类似支付宝密码输入框"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +74,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 let hoverVc:ZYHoverViewController = ZYHoverViewController()
                 self.navigationController?.pushViewController(hoverVc, animated: true)
+            }
+            break
+        case 5:
+            do {
+                
+                let securityBoxVc:ZYSecurityBoxViewController = ZYSecurityBoxViewController()
+                self.navigationController?.pushViewController(securityBoxVc, animated: true)
             }
             break
         default:
